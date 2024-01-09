@@ -1,8 +1,8 @@
-import { TodoCounter } from './components/todocounter/TodoCounter';
-import { TodoSearch } from './components/todosearch/TodoSearch';
-import { TodoList } from './components/todolist/TodoList';
-import { TodoClick } from './components/todoclick/TodoClick';
-import { Task } from './classes/Task';
+import { TodoCounter } from '../components/todocounter/TodoCounter';
+import { TodoSearch } from '../components/todosearch/TodoSearch';
+import { TodoList } from '../components/todolist/TodoList';
+import { TodoClick } from '../components/todoclick/TodoClick';
+import { Task } from '../classes/Task';
 
 import './App.css';
 import React from 'react';
@@ -18,7 +18,7 @@ function App() {
 
     let newTask = new Task();
 
-    if(searchValue != null && searchValue != ''){
+    if(searchValue !== null && searchValue !== ''){
 
       newTask.text = searchValue;
       setTasks([...tasks, newTask]);

@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Lora';
+  src: url('../../public/font/Lora-SemiBoldItalic.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  font-family: 'Lora', serif;
+}
+
+.container-app {
+  height: 2000px;
+  text-align: center;
+  background-color: #49537A ;
+}
