@@ -1,0 +1,19 @@
+li{
+    border-radius: 50px;
+    color:var(--secondary-color);
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.done{
+    background-color: #138D75;
+}
+
+.notDone{
+    background-color: #A62C2C;
+}
+
+.button-delete{
+    cursor: pointer;
+}

@@ -1,8 +1,10 @@
-function TodoItem(props){
+import './TodoItem.css'
+
+function TodoItem({ task, changeTodoState }){
     return (
-      <li>
-        <span>{ props.text }</span>
-      </li>
+      <li className={ task.state ? 'done' : 'notDone'} onClick={changeTodoState}>
+        <span>{ task.text }</span>
+      </li> 
     )
   }
 

@@ -2,14 +2,78 @@
   font-family: 'Lora';
   src: url('../../public/font/Lora-SemiBoldItalic.ttf') format('truetype');
 }
+ 
+:root{
+  --primary-color:#49537A;
+  --secondary-color:#ECECEC;
+  --tertiary-color:#273746;
+  --quaternary-color:#5D6D7E;
+}
 
 * {
   margin: 0;
+  padding: 0;
   font-family: 'Lora', serif;
 }
 
-.container-app {
-  height: 2000px;
-  text-align: center;
-  background-color: #49537A ;
+body{
+  height: 600px;
+  background-color: var(--primary-color)
 }
+
+#app{
+  height: 100%;
+}
+
+.container-app {
+  height: 100%;
+  text-align: center;
+}
+
+
+/* TITULO */
+.container-titulo{
+  display: flex;
+  height: 25%;
+}
+
+.content-titulo{
+  position: relative;
+  height: 60%;
+  margin: auto;
+}
+
+
+/* SUBTITULO */
+.container-subtitulo{
+  position: absolute;
+  left: 138px;
+  top: 128px;
+  background-color: var(--tertiary-color);
+  border-radius: 10px;
+}
+
+.content-subtitulo{
+  padding: 10px;
+}
+
+.subtitulo{
+  font-size: 18px;
+  color: var(--secondary-color);
+}
+
+
+/* LISTA */
+.container-lista{
+  width: 100%;
+  height: 60%;
+}
+
+.content-lista{
+  width: 80%;
+  height: 100%;
+  border: 3px solid var(--tertiary-color);
+  border-radius: 20px;
+  margin: auto;
+}
+

@@ -13,7 +13,6 @@ function App() {
 
   let [tasks, setTasks] = React.useState([]);
 
-
   let saveTask = (event) => {
 
     let newTask = new Task();
@@ -34,15 +33,28 @@ function App() {
 
   return ( 
     <div className='container-app'>
-      <TodoCounter tasksCount={ tasks.length } tasksDone={ showTasksDone() }/>
+
+      <div className='container-titulo'>
+        <div className='content-titulo'>
+        <TodoCounter tasksCount={ tasks.length } tasksDone={ showTasksDone() }/>
+        </div>
+      </div>
+
+      <div className="container-lista" >
+        <div className="content-lista">
+          <div className='container-subtitulo'>
+            <div className='content-subtitulo'>
+              <h3 className='subtitulo'>TAREAS</h3>
+            </div>
+          </div>
+          <TodoList tasks= { tasks } setTasks={setTasks}/>
+        </div>
+      </div>
 
       <TodoSearch 
         searchValue={ searchValue }
         setSearchValue={ setSearchValue }
         saveTask={ saveTask }/>
-
-      <TodoList tasks= { tasks }/>
-
       <TodoClick saveTask={ saveTask }/>
     </div>
   );
