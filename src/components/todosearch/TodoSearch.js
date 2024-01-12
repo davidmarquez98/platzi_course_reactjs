@@ -1,4 +1,5 @@
 import React from "react";
+import './TodoSearch.css';
 
 function TodoSearch({
     searchValue,
@@ -6,20 +7,28 @@ function TodoSearch({
     saveTask
 }){
 
-    const handleKeyUp = (event) => {
-        
-        if (event.key === 'Enter') { 
-            saveTask();
-          }
-    };
+    // const handleKeyUp = (event) => {
+    //     if (event.key === 'Enter') { 
+    //         event.preventDefault();
+    //         if(searchValue == '\n'){
+    //             console.log(searchValue);
+    //             setSearchValue("aaaaaa");
+    //             console.log(searchValue);
+    //         }
+
+    //         saveTask();
+    //       }
+    // };
 
     return (
         <>
-        <input 
-            placeholder="Escribir aqui"
+        <textarea 
+            className="textarea-add-todo"
+            placeholder="Escribe aqui tu tarea"
             value={ searchValue }
-            onChange={(event) => { setSearchValue(event.target.value); }}
-            onKeyUp={handleKeyUp}></input>
+            onChange={(event) => { setSearchValue(event.target.value) }}
+            // onKeyUp={handleKeyUp}
+        />
         </>
     )
 }

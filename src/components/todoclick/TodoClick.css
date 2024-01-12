@@ -1,0 +1,8 @@
+.button-save{
+    box-sizing: border-box;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+    height: 40px;
+    padding: 10px;
+}

@@ -12,11 +12,19 @@ ul{
     position: absolute;
     top: 4px;
     right: 35px;
-    background-color: var(--tertiary-color);
+    border: none;
     border-radius: 10px;
     color: var(--secondary-color);
-    border: none;
-    padding: 8px
+    padding: 8px;
+    cursor: pointer;
+}
+
+.button-delete-green{
+    background-color: #005700;
+}
+
+.button-delete-red{
+    background-color: #5F1212;
 }
 
 .button-delete span{

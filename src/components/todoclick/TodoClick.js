@@ -1,4 +1,6 @@
 import React from "react";
+import { FaPlus } from "react-icons/fa";
+import './TodoClick.css';
 
 function TodoClick({ saveTask }){
     let [state, setState] = React.useState(0);
@@ -7,9 +9,7 @@ function TodoClick({ saveTask }){
         setState(state + 1);
     }
 
-    return (
-            <button onClick={ saveTask }>Click</button>
-    )
+    return ( <button className="button-default button-save" onClick={ saveTask }><FaPlus/></button> )
 }
 
 export { TodoClick };

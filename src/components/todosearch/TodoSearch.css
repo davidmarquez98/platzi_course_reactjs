@@ -1,0 +1,7 @@
+.textarea-add-todo{
+    background-color: var(--secondary-color);
+    outline: none;
+    border: 2px solid var(--tertiary-color);
+    width: 250px;
+    height: 60px;
+}
