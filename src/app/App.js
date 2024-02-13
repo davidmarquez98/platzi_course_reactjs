@@ -2,12 +2,12 @@ import { TodoCounter } from '../components/todocounter/TodoCounter';
 import { TodoSearch } from '../components/todosearch/TodoSearch';
 import { TodoList } from '../components/todolist/TodoList';
 import { TodoClick } from '../components/todoclick/TodoClick';
+import { TodoIconos } from '../components/todoiconos/TodoIconos';
 import { Task } from '../classes/Task';
 
 import { FaRegTrashCan } from "react-icons/fa6";
 import { TiArrowSortedDown } from "react-icons/ti";
-import { FaGithubAlt as GitHubIcon } from "react-icons/fa";
-import { FaLinkedin as LinkedinIcon} from "react-icons/fa";
+
 
 import './App.css';
 import React from 'react';
@@ -35,32 +35,36 @@ function App() {
       setSearchValue('');
 
     }
-
   }
 
   let showTasksDone = () => tasks.filter(task => task.state).length;
 
+  const mainTitulo = "TASKY.";
 
   return ( 
     <div className='container-app'>
-      <div className='container-iconos'>
-        <div className='content-iconos'>
-          <a href='https://github.com/davidmarquez98' target='_blank'>
-            <button className='button-icon'>
-              <GitHubIcon className='icono'/>
-            </button>
-          </a>
-          <a href='https://www.linkedin.com/in/david-ariel-marquez/' target='_blank'>
-            <button className='button-icon'>
-              <LinkedinIcon className='icono'/>
-            </button>
-          </a>
+      <div className='container-nav'>
+        <div className='content-nav'>
+          <div className='container-main-titulo'>
+            <div className='content-main-titulo'>
+              <span className='main-titulo'>{mainTitulo}</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className='container-titulo'>
-        <div className='content-titulo'>
-        <TodoCounter tasksCount={ tasks.length } tasksDone={ showTasksDone() }/>
+      <div className='container-top-card'>
+        <div className='content-top-card'>
+          <div className='container-titulo'>
+            <div className='content-titulo'>
+              <TodoCounter tasksCount={ tasks.length } tasksDone={ showTasksDone() }/>
+            </div>
+          </div>
+          <div className='container-linea'>
+            <div className='content-linea'>
+              <div className='linea'></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -75,11 +79,6 @@ function App() {
         <div className="content-card">
 
           <div className='card'>
-            <div className='container-subtitulo'>
-              <div className='content-subtitulo'>
-                <h3 className='subtitulo'>TAREAS</h3>
-              </div>
-            </div>
 
             <div className="container-lista">
               <div className="content-lista">
@@ -112,10 +111,25 @@ function App() {
               </div>
               <TodoClick  saveTask={ saveTask }/>
              </div>
-           </div>
+          </div>
 
         </div>
 
+      </div>
+
+      <div className='container-bottom'>
+        <div className='content-bottom'>
+            <div className='container-nombre'>
+              <div className='content-nombre'> 
+              <span className='nombre'>© David M.</span>
+              </div>
+            </div>
+            <div className='container-iconos'>
+              <div className='content-iconos'>
+                <TodoIconos></TodoIconos>
+              </div>
+            </div>
+        </div>
       </div>
 
     </div>
